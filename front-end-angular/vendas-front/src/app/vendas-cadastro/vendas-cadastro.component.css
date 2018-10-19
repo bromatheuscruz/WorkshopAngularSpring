@@ -1,0 +1,13 @@
+.title {
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-weight: bold;
+  font-size: 2em;
+}
