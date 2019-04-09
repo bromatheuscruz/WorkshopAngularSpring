@@ -15,6 +15,7 @@ public class VendaService {
 
 	@Autowired
 	VendaRepository vendaRepository;
+	
 	@Autowired
 	ProdutoRepository produtoRepository;
 
@@ -26,12 +27,13 @@ public class VendaService {
 		});
 
 		BigDecimal totalItens = venda.getItens().stream()
-				.map(i -> i.getProduto().getValor().multiply(new BigDecimal(i.getQuantidade())))
+				.map(i -> i.getProduto()
+				.getValor()
+				.multiply(new BigDecimal(i.getQuantidade())))
 				.reduce(BigDecimal.ZERO, BigDecimal::add);
 
 		venda.setTotal(totalItens.add(venda.getFrete()));
 
 		return vendaRepository.save(venda);
 	}
-
 }

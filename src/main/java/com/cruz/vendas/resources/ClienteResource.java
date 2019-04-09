@@ -21,7 +21,6 @@ public class ClienteResource {
 
 	@GetMapping
 	public List<Cliente> listar() {
-
 		return clienteRepository.findAll();
 	}
 

@@ -29,7 +29,6 @@ public class VendaResource {
 
 	@GetMapping
 	public List<Venda> listar() {
-
 		return vendaRepository.findAll();
 	}
 		

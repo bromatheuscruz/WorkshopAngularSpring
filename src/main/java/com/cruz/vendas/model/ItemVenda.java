@@ -83,5 +83,4 @@ public class ItemVenda implements Serializable {
 			return false;
 		return true;
 	}
-
 }
