@@ -9,3 +9,7 @@
 .col-numero {
   text-align: right;
 }
+ 
+.margin-all-10 {
+  margin: 10px !important;
+}

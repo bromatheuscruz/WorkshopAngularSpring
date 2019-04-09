@@ -1,11 +1,11 @@
 <div class="ui-g">
-  <div class="ui-g-12">
+  <div class="ui-g-12 flex">
     <h1>Cadastro venda</h1>
   </div>
 </div>
 
 <form autocomplete="off" #frm="ngForm" (ngSubmit)="adicionar(frm)">
-  <div class="ui-g">
+  <div class="ui-g margin-all-10">
     <div class="ui-g-8 ui-sm-12 ui-fluid">
       <label class="title">Cliente</label>
       <p-dropdown id="cliente" name="cliente" [autoWidth]="false" placeholder="Selecione..." [options]="clientes"
@@ -14,8 +14,9 @@
 
     <div class="ui-g-4 ui-sm-12 ui-fluid">
       <label class="title">Frete</label>
-      <input pInputText id="frete" name="frete" currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }"
-        [(ngModel)]="venda.frete" required (ngModelChange)="calcularTotal()" />
+      <input pInputText id="frete" name="frete" currencyMask
+        [options]="{ prefix: '', thousands: '.', decimal: ',', allowNegative: false }" [(ngModel)]="venda.frete"
+        required (ngModelChange)="calcularTotal()" />
     </div>
 
     <div class="ui-g-12">
@@ -29,14 +30,15 @@
 
           <div class="ui-g-3 ui-sm-12 ui-fluid">
             <label>Quantidade</label>
-            <input pInputText type="number" id="quantidade" name="quantidade" [(ngModel)]="item.quantidade" #quantidade />
+            <input pInputText type="number" id="quantidade" name="quantidade" [(ngModel)]="item.quantidade"
+              #quantidade />
           </div>
 
           <div class="ui-g-1 ui-sm-12 ui-fluid">
             <br />
-            <button pButton type="button" icon="pi pi-plus" (click)="incluirItem()" [disabled]="!produto.value || !quantidade.value"></button>
+            <button pButton type="button" icon="pi pi-plus" (click)="incluirItem()"
+              [disabled]="!produto.value || !quantidade.value"></button>
           </div>
-
           <div class="ui-g-12">
             <p-table [value]="venda.itens" responsive="true">
               <ng-template pTemplate="header">

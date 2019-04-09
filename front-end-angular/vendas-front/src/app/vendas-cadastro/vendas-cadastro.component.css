@@ -6,8 +6,19 @@
 }
 
 h1 {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
+  font-weight: 100 !important;
+  color: darkcyan;
+  font-size: 3em;
   box-sizing: border-box;
   font-weight: bold;
-  font-size: 2em;
+}
+
+.flex {
+  display: flex !important;
+  justify-content: center;
+}
+
+.margin-all-10 {
+  margin: 10px !important;
 }
